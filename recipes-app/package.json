@@ -2,9 +2,10 @@
   "name": "recipes-app",
   "version": "1.0.0",
   "description": "Projects based on Learning React, 2nd Edition Book\r # React app started from scrarch",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development"
   },
   "keywords": [],
   "author": "",

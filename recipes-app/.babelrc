@@ -1,3 +1,3 @@
 {
-  "presets": ["@babel/babel-env", "@babel/babel-react"]
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
 }

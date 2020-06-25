@@ -7,7 +7,7 @@
 3. Project structure:
 3.1 ./src/components
 3.2 ./src/data
-3.3 ./src/index.js
+3.3 ./src/app.js
 
 4. npm install --save-dev webpack webpack-cli babel-loader @babel/core 
 
@@ -18,7 +18,7 @@
  var path = require("path");
 
  module.exports = {
-   entry: "./src/index.js",
+   entry: "./src/app.js",
    output: {
      path: path.join(__dirname, "dist", "assets"),
      filename: "bundle.js"
