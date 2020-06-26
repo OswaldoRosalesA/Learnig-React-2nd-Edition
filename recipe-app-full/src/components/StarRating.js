@@ -1,17 +1,16 @@
 // ./src/components/StarRating.js
 
-import React, {useState} from "react";
+import React from "react";
 import Star from "./Star";
 
 const createArray = length => [...Array(length)];
 
-const StarRating = ({style = {}, totalStars = 5, ...props}) => {
-    const [selectedStars, setSelectedStars] = useState(0);
+const StarRating = ({style = {}, totalStars = 5, selectedStars = 0, onRate = f => f}) => {
     return (
-        <div style={{padding: "5px", ...style}} {...props} className="star-rating">
+        <div style={{padding: "5px", ...style}} className="star-rating">
             {
                 createArray(totalStars).map((n, i) => {
-                    return <Star key={i} selected={selectedStars > i} onSelect={() => setSelectedStars(i + 1)}/>;
+                    return <Star key={i} selected={selectedStars > i} onSelect={() => onRate(i + 1)}/>;
                 })
             }
 
