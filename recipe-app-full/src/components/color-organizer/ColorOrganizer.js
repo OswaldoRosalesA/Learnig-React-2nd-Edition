@@ -8,8 +8,8 @@ const ColorOrganizer = () => {
     const [colors, setColors] = useState(colorData);
     return (
         <div>
-        <AddColorForm onNewColor={(title, color) => alert(`${title} ${color}`)}/>
-        <ColorList
+            <AddColorForm onNewColor={(title, color) => alert(`${title} ${color}`)}/>
+            <ColorList
                 colors={colors}
                 onRemoveColor={id => setColors(colors.filter(color => color.id !== id))}
                 onRateColor={(id, rating) => setColors(colors.map(color => color.id === id ? { ...color, rating } : color))}
