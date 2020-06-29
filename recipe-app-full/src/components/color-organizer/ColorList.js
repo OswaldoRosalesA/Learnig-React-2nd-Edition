@@ -1,11 +1,13 @@
 import React from "react";
+import {useColors} from "./color-hooks";
 import Color from "./Color";
 
-const ColorList = ({colors = [], onRemoveColor = f => f, onRateColor = f => f}) => {
+const ColorList = () => {
+    const {colors} = useColors();
     if (!colors.length) return <div>No Colors Listed</div>;
     return (
         <div>
-            {colors.map((color, i) => (<Color key={i} onRemove={onRemoveColor} {...color} onRate={onRateColor}/>))}
+            {colors.map((color, i) => (<Color key={i} {...color}/>))}
         </div>
     );
 };
